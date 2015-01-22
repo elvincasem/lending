@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css\jquery.mobile-1.4.3.min.css" />
+		<script src="js\jquery-1.11.1.min.js"></script>
+		<script src="js\jquery.mobile-1.4.3.min.js"></script>
+		<link rel="stylesheet" href="css\style.css" />
+
+
+</head>
+<body>
+
+<!-- HOME -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>OUS Lending App</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-mini="true" data-filter="false">
+					<li><a href="#iloan"><img src="css/images/loan-icon.png"> I-Loan<br />
+							<i>Apply and check Loan Status</i></a></li>
+					<li><a href="#myrecords"><img src="css/images/records-icon.png">My Records<br />
+							<i>View your records</i></a></li>
+					<li><a href="#about"><img src="css/images/about-icon.png">About OUS Lending Mobile App<br /><i>All about the OUS Lending Mobile App</i></a></li>
+				
+				</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1></h1>
+		</div>
+	</div>
+
+<!-- ILoan -->
+	<div data-role="page" id="iloan">
+		<div data-role="header" data-theme="b">
+			<h1>I-Loan</h1>
+		</div>
+		<div data-role="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas nulla eros, in scelerisque nibh consectetur ac. Aenean semper, nisi vel lacinia varius, magna ipsum condimentum odio, in fermentum lectus est mollis diam.</p>
+			<p>Fill up the form:</p>
+			<p><form><input name="textinput-hide" id="textinput-hide" placeholder="First Name" value="" type="text">
+			<input name="textinput-hide" id="textinput-hide" placeholder="Last Name" value="" type="text">
+			<input name="textinput-hide" id="textinput-hide" placeholder="Address" value="" type="text">
+			<input name="textinput-hide" id="textinput-hide" placeholder="Phone Number" value="" type="text">
+			<input name="textinput-hide" id="textinput-hide" placeholder="Occupation" value="" type="text">
+			<input name="textinput-hide" id="textinput-hide" placeholder="Position" value="" type="text">
+			<textarea cols="40" rows="15" name="textarea" placeholder="Message" id="textarea"></textarea>
+			
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+    <option>Type of Loan</option>
+    <option value="Providential regular loan">Providential/Regular Loan</option>
+    <option value="Emergency Loan">Emergency Loan</option>
+    <option value="Fast Loan">Fast Loan</option>
+    <option value="Financing">Financing</option>
+</select>
+			<button class="ui-shadow ui-btn ui-corner-all">Submit</button>
+			</form></p>	
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#myrecords" data-icon="carat-r">My Records</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+
+<!-- DECIMAL NUMBER SYSTEM -->
+	<div data-role="page" id="myrecords">
+		<div data-role="header" data-theme="b">
+			<h1>My Records</h1>
+		</div>
+		<div data-role="content">
+			<h2>View your records.</h2>
+			<p><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text"></p>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#iloan" data-icon="carat-l">I-Loan</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#about" data-icon="carat-r">About OUS Lending Mobile App</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+<!-- BINARY NUMBER SYSTEM -->
+	<div data-role="page" id="about">
+		<div data-role="header" data-theme="b">
+			<h1>About OUS Lending Mobile App</h1>
+		</div>
+		<div data-role="content">
+			<h2>OUS Lending Mobile App</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas nulla eros, in scelerisque nibh consectetur ac. Aenean semper, nisi vel lacinia varius, magna ipsum condimentum odio, in fermentum lectus est mollis diam. Vivamus vulputate mi eu quam semper, quis molestie diam malesuada. In fringilla quam sit amet tempor elementum. Vivamus vel lacinia nunc. Sed dictum nisi in lobortis consectetur. Nulla viverra malesuada magna, eu sodales neque tincidunt vitae.
+<br /><br /><br />
+Nam eu arcu faucibus, bibendum metus vel, scelerisque libero. Maecenas vitae nisi vitae odio pulvinar semper. Integer fermentum nunc non pharetra hendrerit. Donec molestie in lectus sit amet ultrices. 
+<br /><br /><br />
+Donec pharetra et neque et bibendum. Mauris sed condimentum turpis, in dignissim augue. Aliquam vulputate gravida sodales. Aenean sed laoreet mi. Etiam varius tincidunt quam, tristique fermentum eros condimentum vitae.<br /><br /><br />
+
+Developer: Jonathan Bravo</p>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#myrecords" data-icon="carat-l">My Records</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						
+					</ul>
+			</div>
+		</div>
+	</div>
+
+
+	
+	
+</body>
+</html>
