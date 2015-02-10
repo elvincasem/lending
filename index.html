@@ -38,15 +38,15 @@
 			<h1>I-Loan</h1>
 		</div>
 		<div data-role="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas nulla eros, in scelerisque nibh consectetur ac. Aenean semper, nisi vel lacinia varius, magna ipsum condimentum odio, in fermentum lectus est mollis diam.</p>
-			<p>Fill up the form:</p>
-			<p><form><input name="textinput-hide" id="textinput-hide" placeholder="First Name" value="" type="text">
-			<input name="textinput-hide" id="textinput-hide" placeholder="Last Name" value="" type="text">
-			<input name="textinput-hide" id="textinput-hide" placeholder="Address" value="" type="text">
-			<input name="textinput-hide" id="textinput-hide" placeholder="Phone Number" value="" type="text">
-			<input name="textinput-hide" id="textinput-hide" placeholder="Occupation" value="" type="text">
-			<input name="textinput-hide" id="textinput-hide" placeholder="Position" value="" type="text">
-			<textarea cols="40" rows="15" name="textarea" placeholder="Message" id="textarea"></textarea>
+			
+			<p>Please fill up the form and we will review your Loan Application:</p>
+			<p><form id="loanform" role="form" method="get"><input name="firstname" id="first_name" placeholder="First Name" type="text">
+			<input name="lastname" id="lastname" placeholder="Last Name" type="text">
+			<input name="address" id="address" placeholder="Address" value="" type="text">
+			<input name="phone" id="phone" placeholder="Phone Number" value="" type="text">
+			<input name="occupation" id="occupation" placeholder="Occupation" value="" type="text">
+			<input name="position" id="position" placeholder="Position" value="" type="text">
+			<textarea cols="40" rows="15" name="message" placeholder="Message" id="message"></textarea>
 			
 <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
     <option>Type of Loan</option>
@@ -55,27 +55,50 @@
     <option value="Fast Loan">Fast Loan</option>
     <option value="Financing">Financing</option>
 </select>
-			<button class="ui-shadow ui-btn ui-corner-all">Submit</button>
-			</form></p>	
+			<button class="ui-shadow ui-btn ui-corner-all btnsubmit">Submit</button>
+			</form></p>	<a style="visibility:hidden;height:0px;width:0px;" href="#thankyou" data-icon="home" id="thankyoubutton">Home</a>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
+		
 			<div data-role="navbar">
 					<ul>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						
+						<li><a href="#home" data-icon="home" id="homebutton">Home</a></li>
 						<li><a href="#myrecords" data-icon="carat-r">My Records</a></li>
 					</ul>
 				</div>
 		</div>
 	</div>
+	
+<!-- Thank You -->
+	<div data-role="page" id="thankyou">
+		<div data-role="header" data-theme="b">
+			<h1>Thank You</h1>
+		</div>
+		<div data-role="content">
+			<h2>Your application has been sent. We will review your application and we will contact you immediately. Thank You!</h2>
+			
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<div data-role="navbar">
+					<ul>
+						<li><a href="#iloan" data-icon="carat-l">I-Loan</a></li>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#about" data-icon="carat-r">About OUS Lending Mobile App</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
 
-<!-- DECIMAL NUMBER SYSTEM -->
+<!-- My records SYSTEM -->
 	<div data-role="page" id="myrecords">
 		<div data-role="header" data-theme="b">
 			<h1>My Records</h1>
 		</div>
 		<div data-role="content">
 			<h2>View your records.</h2>
-			<p><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text"></p>
+			<p><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text">
+			<button class="ui-shadow ui-btn ui-corner-all">Search</button></p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div data-role="navbar">
@@ -91,15 +114,21 @@
 <!-- BINARY NUMBER SYSTEM -->
 	<div data-role="page" id="about">
 		<div data-role="header" data-theme="b">
-			<h1>About OUS Lending Mobile App</h1>
+			<h1>About DMLUC Cooperative</h1>
 		</div>
 		<div data-role="content">
-			<h2>OUS Lending Mobile App</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur egestas nulla eros, in scelerisque nibh consectetur ac. Aenean semper, nisi vel lacinia varius, magna ipsum condimentum odio, in fermentum lectus est mollis diam. Vivamus vulputate mi eu quam semper, quis molestie diam malesuada. In fringilla quam sit amet tempor elementum. Vivamus vel lacinia nunc. Sed dictum nisi in lobortis consectetur. Nulla viverra malesuada magna, eu sodales neque tincidunt vitae.
+			<h2>History of DMLUC Cooperative</h2>
+			<p style="text-align:justify;">It was in 1995 when DMMMSU President Dr. Manuel Corpuz sent Dr. Concepcion Bederio to attend a summer institure on Local Government Administration in UP Diliman, Quezon City.<br /><br /><br />
+	It was during the summer institute when Dr, Bederio was exposed to progressive cooperative specially the cooperative of Bulacan.<br /><br /><br />
+	After the summer institute Dr. C. Bederio shared the idea to the dean of graduate school who was then Dr. Bugaoan. He approved the idea that was presented to graduate studies faculty. Fortunately the faculty accepted it. However they were only four so the faculty members of the Midwifery Department and College of Education were also recruited.<br /><br /><br />
+	Mr. Aguilos of the Department of Agriculture and Mr. Flores of the Municipal cooperative were invited to talk on the organization of the cooperative.<br /><br /><br />
+	The DMMMSU Multipurpose Cooperative Incorporated was organized with only 28 members with share capital of Php. 20,000.<br /><br /><br />
+	The Members the Board of Directors were Dr. M. Caoile, Mrs. E. Aprecio, Dr. C. Manzano, Dr. Mendoza and Dr. Oliver with Dr. C. Bederio as the Manager with two full time employee.<br /><br /><br />
+	In 2007 , the name was changed to DMMMSU La Union Multipurpose Cooperative because members was extended to the whole DMMMSU North La Union Campus, South La Union Campus and Mid La Union faculty and staff could become a member.<br /><br /><br />
+	In 2011 the DMMMSU La Union Multipurpose cooperative was changed from institutional to residential cooperative, to expand membership to the whole region.<br /><br /><br />
+At present DLUMC have more than 200 members with share deposit of more than Php.6, 000,000.00.
+Pursuant to R.A. 6938 on the Cooperative of the Philippines and R.A. 6939 on the Cooperative Development Authority the DLUMC was formed and registered on 1995 at the Cooperative Development Authority City of San Fernando, La Union, Region 1 (CDA-R1)
 <br /><br /><br />
-Nam eu arcu faucibus, bibendum metus vel, scelerisque libero. Maecenas vitae nisi vitae odio pulvinar semper. Integer fermentum nunc non pharetra hendrerit. Donec molestie in lectus sit amet ultrices. 
-<br /><br /><br />
-Donec pharetra et neque et bibendum. Mauris sed condimentum turpis, in dignissim augue. Aliquam vulputate gravida sodales. Aenean sed laoreet mi. Etiam varius tincidunt quam, tristique fermentum eros condimentum vitae.<br /><br /><br />
 
 Developer: Jonathan Bravo</p>
 		</div>
@@ -115,7 +144,51 @@ Developer: Jonathan Bravo</p>
 	</div>
 
 
-	
+<script type="text/javascript">
+    	jQuery(document).ready(function($) {
+    		$('.btnsubmit').click(function(){
+			
+			//$('#home').click();
+			document.getElementById("thankyoubutton").click();
+			//$('#myrecords')[0].click();
+				/*d1 = document.getElementById("iloan");
+				d2 = document.getElementById("thankyou");
+				if( d2.style.display == "none" )
+				   {
+					  d1.style.display = "none";
+					  d2.style.display = "block";
+				   }
+				   else
+				   {
+					  d1.style.display = "block";
+					  d2.style.display = "none";
+				   }
+				
+				
+    			makeAjaxRequest();*/
+				//window.alert('ok');
+    		});
+
+            $('form').submit(function(e){
+                e.preventDefault();
+                makeAjaxRequest();
+				document.getElementById("loanform").reset();
+                return false;
+            });
+
+            function makeAjaxRequest() {
+			//var fname = getElementById('firstname').value;
+                $.ajax({
+                    url: 'http://dmmmsu-sluc.com/lending/mail.php',
+                    type: 'get',
+                    data: {firstname: $('input#first_name').val(), lastname: $('input#lastname').val(), address: $('input#address').val(), phone: $('input#phone').val(), occupation: $('input#occupation').val(), position: $('input#position').val(),message: $('input#message').val()},
+                    success: function(response) {
+                        $('table#resultTable tbody').html(response);
+                    }
+                });
+            }
+    	});
+    </script>	
 	
 </body>
 </html>
