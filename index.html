@@ -48,7 +48,7 @@
 			<input name="position" id="position" placeholder="Position" value="" type="text">
 			<textarea cols="40" rows="15" name="message" placeholder="Message" id="message"></textarea>
 			
-<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+<select name="typeofloan" id="typeofloan" data-native-menu="false">
     <option>Type of Loan</option>
     <option value="Providential regular loan">Providential/Regular Loan</option>
     <option value="Emergency Loan">Emergency Loan</option>
@@ -97,8 +97,17 @@
 		</div>
 		<div data-role="content">
 			<h2>View your records.</h2>
-			<p><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text">
-			<button class="ui-shadow ui-btn ui-corner-all">Search</button></p>
+			<p><form id="searchbalance" role="form" method="get"><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text">
+			<button class="ui-shadow ui-btn ui-corner-all btnsearch">Search</button></form></p>
+			<!-- This table is where the data is display. -->
+                    <table id="resultTable" class="table table-striped table-hover">
+                        <thead>
+                            <th>Member ID</th>
+                            <th>Name</th>
+                            <th>Balance</th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div data-role="navbar">
@@ -146,8 +155,10 @@ Developer: Jonathan Bravo</p>
 
 <script type="text/javascript">
     	jQuery(document).ready(function($) {
+			$('.btnsearch').click(function(){
+    		});
     		$('.btnsubmit').click(function(){
-			
+			makeAjaxRequest();
 			//$('#home').click();
 			document.getElementById("thankyoubutton").click();
 			//$('#myrecords')[0].click();
@@ -171,7 +182,7 @@ Developer: Jonathan Bravo</p>
 
             $('form').submit(function(e){
                 e.preventDefault();
-                makeAjaxRequest();
+                //makeAjaxRequest();
 				document.getElementById("loanform").reset();
                 return false;
             });
@@ -181,7 +192,7 @@ Developer: Jonathan Bravo</p>
                 $.ajax({
                     url: 'http://dmmmsu-sluc.com/lending/mail.php',
                     type: 'get',
-                    data: {firstname: $('input#first_name').val(), lastname: $('input#lastname').val(), address: $('input#address').val(), phone: $('input#phone').val(), occupation: $('input#occupation').val(), position: $('input#position').val(),message: $('input#message').val()},
+                    data: {firstname: $('input#first_name').val(), lastname: $('input#lastname').val(), address: $('input#address').val(), phone: $('input#phone').val(), occupation: $('input#occupation').val(), position: $('input#position').val(),message: $('input#message').val(),typeofloan: $('input#typeofloan').val()},
                     success: function(response) {
                         $('table#resultTable tbody').html(response);
                     }
