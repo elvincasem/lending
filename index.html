@@ -100,7 +100,7 @@
 			<p><form id="searchbalance" role="form" method="get"><input name="memberid" id="memberid" placeholder="Member ID" value="" type="text">
 			<button class="ui-shadow ui-btn ui-corner-all btnsearch">Search</button></form></p>
 
-			<p data-role="content" id="balancedisplay" style="text-align:center;" >
+			<p id="balancedisplay" style="text-align:center;" >
 				<div style="display:none;" id="loader"><img style="width:50px;height:50px;" src="css/images/loader.gif"></div>
 			</p>
 		</div>
@@ -151,7 +151,7 @@ Developer: Jonathan Bravo</p>
 <script type="text/javascript">
     	jQuery(document).ready(function($) {
 			$('.btnsearch').click(function(){
-				document.getElementById("balancedisplay").html="";
+				document.getElementById("balancedisplay").html=" ";
 				document.getElementById("loader").style.display="block";
 				searchbalance();	
 				
@@ -201,7 +201,8 @@ Developer: Jonathan Bravo</p>
 			function searchbalance() {
 			//var fname = getElementById('firstname').value;
                 $.ajax({
-                    url: 'http://localhost/lending_system/mobile/search.php',
+                    url: 'http://lendingsystem.tk/mobile/search.php',
+					//url: 'http://localhost/lending_system/mobile/search.php',
                     type: 'get',
                     data: {idnumber: $('input#memberid').val()},
                     success: function(response) {
