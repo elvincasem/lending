@@ -15,7 +15,7 @@
 <!-- HOME -->
 	<div data-role="page" id="home">
 		<div data-role="header" data-theme="b">
-			<h1>DLUMC-BMS App</h1>
+			<h1>DLUMC-BMS Mobile App</h1>
 		</div>
 		<div data-role="content">
 			<ul data-role="listview" data-mini="true" data-filter="false">
@@ -97,17 +97,12 @@
 		</div>
 		<div data-role="content">
 			<h2>View your records.</h2>
-			<p><form id="searchbalance" role="form" method="get"><input name="textinput-hide" id="textinput-hide" placeholder="Member ID" value="" type="text">
+			<p><form id="searchbalance" role="form" method="get"><input name="memberid" id="memberid" placeholder="Member ID" value="" type="text">
 			<button class="ui-shadow ui-btn ui-corner-all btnsearch">Search</button></form></p>
-			<!-- This table is where the data is display. -->
-                    <table id="resultTable" class="table table-striped table-hover">
-                        <thead>
-                            <th>Member ID</th>
-                            <th>Name</th>
-                            <th>Balance</th>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+
+			<p data-role="content" id="balancedisplay" style="text-align:center;" >
+				<div style="display:none;" id="loader"><img style="width:50px;height:50px;" src="css/images/loader.gif"></div>
+			</p>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div data-role="navbar">
@@ -156,6 +151,10 @@ Developer: Jonathan Bravo</p>
 <script type="text/javascript">
     	jQuery(document).ready(function($) {
 			$('.btnsearch').click(function(){
+				document.getElementById("balancedisplay").html="";
+				document.getElementById("loader").style.display="block";
+				searchbalance();	
+				
     		});
     		$('.btnsubmit').click(function(){
 			makeAjaxRequest();
@@ -195,6 +194,23 @@ Developer: Jonathan Bravo</p>
                     data: {firstname: $('input#first_name').val(), lastname: $('input#lastname').val(), address: $('input#address').val(), phone: $('input#phone').val(), occupation: $('input#occupation').val(), position: $('input#position').val(),message: $('input#message').val(),typeofloan: $('input#typeofloan').val()},
                     success: function(response) {
                         $('table#resultTable tbody').html(response);
+                    }
+                });
+            }
+			
+			function searchbalance() {
+			//var fname = getElementById('firstname').value;
+                $.ajax({
+                    url: 'http://localhost/lending_system/mobile/search.php',
+                    type: 'get',
+                    data: {idnumber: $('input#memberid').val()},
+                    success: function(response) {
+                       
+						setTimeout(function(){
+                                 $('#balancedisplay').html(response);
+                                
+                                document.getElementById("loader").style.display="none";
+                                },1200);
                     }
                 });
             }
