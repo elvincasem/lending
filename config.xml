@@ -20,4 +20,5 @@
         <icon src="icon.png" gap:platform="android" gap:qualifier="xhdpi" />
         <icon src="icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
         <icon src="icon.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
+		<feature name="debug-server" required="false" />
     </widget>
