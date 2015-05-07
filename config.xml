@@ -21,4 +21,8 @@
         <icon src="icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
         <icon src="icon.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
 		<preference name="debuggable" value="false"/>
+		<platform name="android">
+			<preference name="Fullscreen" value="true" />
+			<preference name="debuggable" value="false"/>
+		</platform>
     </widget>
